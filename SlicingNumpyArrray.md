@@ -39,3 +39,56 @@ slicing_rows_columns_simultaneously = new_array([1:,1:])
 
 array([[62,46],[67,76]])
 ```
+
+
+### Conditional Slicing
+
+```python
+
+matrix_C = np.array([[1,2,3,4,5],[4,6,7,3,5],[8,4,5,2,5]])
+
+[[1 2 3 4 5]
+ [4 6 7 3 5]
+ [8 4 5 2 5]]
+
+ ### Conditional Slicing
+
+matrix_C[:,0]
+
+[1 4 8]
+
+## Way 2
+
+matrix_C[:,:] > 4
+
+[[False False False False  True]
+ [False  True  True False  True]
+ [ True False  True False  True]]
+
+## To get the above but in values
+
+matrix_C[matrix_C[:,:]>4]
+
+[5 6 7 5 8 5 5]
+
+#Reasons why the output is a 1-D array:
+
+# 1. Numpy doesn't know how many of the elements would fit this condition
+
+# 2. Python takes the flattened array (which is 1-D) and applies the condition on it
+
+
+// A slightly complex condition in checking for even numbers
+
+matrix_C [matrix_C[:,:] % 2 == 0]
+
+// Satisfying more than one condition
+//One should use parenthesis ()
+
+matrix_C[(matrix_C[:,:] % 2==0) & (matrix_C[:,:]>=2)]
+
+
+
+
+
+```

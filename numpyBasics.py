@@ -21,12 +21,26 @@ import numpy as np
 # print(transpose)
 
 
-matrix = np.array([[1,2,3],[4,5,6],[7,8,9]])
-print(matrix)
+# matrix = np.array([[1,2,3],[4,5,6],[7,8,9]])
+# print(matrix)
 
  
-another_matrix = np.array([[9,8,7], [6,5,4],[3,2,1]])
-print(another_matrix)
+# another_matrix = np.array([[9,8,7], [6,5,4],[3,2,1]])
+# print(another_matrix)
 
+
+# matrix_C = np.array([[1,2,3,4,5],[4,6,7,3,5],[8,4,5,2,5]])
+
+# print(matrix_C)
+
+
+# # print(matrix_C[:,:] > 4)
+
+# print(matrix_C[matrix_C[:,:]>4])
+
+
+matrix_D = np.array([[1,2,4,5,6],[3,2,5,7,7],[8,7,9,7,0]])
+
+print("Squeeze method applied",matrix_D[0:1,0:1].squeeze())
 
 
