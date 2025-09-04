@@ -163,12 +163,20 @@ import numpy as np
 #     else:
 #         print (f"{num} is odd")
 
-new_array = np.array([[56,43,56],[43,62,46],[44,67,76]])
+# new_array = np.array([[56,43,56],[43,62,46],[44,67,76]])
 
-# slicing_row_columns = new_array[:,1:]
+# # slicing_row_columns = new_array[:,1:]
 
-# print(slicing_row_columns)
+# # print(slicing_row_columns)
 
-slicing_rows_columns_simultaneously = new_array[1:,1:]
+# slicing_rows_columns_simultaneously = new_array[1:,1:]
 
-print(slicing_rows_columns_simultaneously)
+# print(slicing_rows_columns_simultaneously)
+
+
+empty_array = np.empty(shape=(2,3))
+print("Empty Array",empty_array)
+
+# np.empty creates the array without initializing the values.
+
+#That means you get whatever random junk was in memory at that moment (it could look like random numbers, but they are not really random, just leftovers)
