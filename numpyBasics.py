@@ -1,6 +1,9 @@
 
 import numpy as np
 
+from numpy.random import Generator as gen
+
+from numpy.random import PCG64 as pcg
 
 # a = np.array([1,2,3])
 # b = np.array([4,5,6])
@@ -39,8 +42,11 @@ import numpy as np
 # print(matrix_C[matrix_C[:,:]>4])
 
 
-matrix_D = np.array([[1,2,4,5,6],[3,2,5,7,7],[8,7,9,7,0]])
+# matrix_D = np.array([[1,2,4,5,6],[3,2,5,7,7],[8,7,9,7,0]])
 
-print("Squeeze method applied",matrix_D[0:1,0:1].squeeze())
+# print("Squeeze method applied",matrix_D[0:1,0:1].squeeze())
 
 
+array_RG = gen(pcg(seed =365 ))
+seed_Generated = array_RG.choice([1,2,3,4,5],size =(5,5))
+print(seed_Generated)
